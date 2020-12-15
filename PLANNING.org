@@ -1,0 +1,25 @@
+#+TITLE: Project Planning
+
+* TODO Identify Components
+** Book
+** Shelf
+** Search
+** BookShelfChanger
+
+* TODO Identify State
+** Book
+** Shelf
+books
+** Search
+query
+** BookShelfChanger
+* TODO Identify Props
+** Book
+*** cover
+*** title
+
+** Shelf
+** Search
+** BookShelfChanger
+* TODO Identify Inverse Data Flow
+* TODO Fetch books using API
