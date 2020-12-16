@@ -23,3 +23,84 @@ query
 ** BookShelfChanger
 * TODO Identify Inverse Data Flow
 * TODO Fetch books using API
+** getAll()
+Returns books that on the shelf
+fields of interest: id, shelf, title, authors, imageLinks
+
+#+begin_src js
+allowAnonLogging: true
+authors: ["William E. Shotts, Jr."]
+averageRating: 4
+canonicalVolumeLink: "https://market.android.com/details?id=book-nggnmAEACAAJ"
+categories: ["COMPUTERS"]
+contentVersion: "1.2.2.0.preview.2"
+description: "You've experienced the shiny, point-and-click surface of your Linux computer—now dive below and explore its depths with the power of the command line. The Linux Command Line takes you from your very first terminal keystrokes to writing full programs in Bash, the most popular Linux shell. Along the way you'll learn the timeless skills handed down by generations of gray-bearded, mouse-shunning gurus: file navigation, environment configuration, command chaining, pattern matching with regular expressions, and more. In addition to that practical knowledge, author William Shotts reveals the philosophy behind these tools and the rich heritage that your desktop Linux machine has inherited from Unix supercomputers of yore. As you make your way through the book's short, easily-digestible chapters, you'll learn how to: * Create and delete files, directories, and symlinks * Administer your system, including networking, package installation, and process management * Use standard input and output, redirection, and pipelines * Edit files with Vi, the world’s most popular text editor * Write shell scripts to automate common or boring tasks * Slice and dice text files with cut, paste, grep, patch, and sed Once you overcome your initial "shell shock," you'll find that the command line is a natural and expressive way to communicate with your computer. Just don't be surprised if your mouse starts to gather dust. A featured resource in the Linux Foundation's "Evolution of a SysAdmin""
+id: "nggnmAEACAAJ"
+imageLinks: {smallThumbnail: "http://books.google.com/books/content?id=nggnmAEAC…J&printsec=frontcover&img=1&zoom=5&source=gbs_api", thumbnail: "http://books.google.com/books/content?id=nggnmAEAC…J&printsec=frontcover&img=1&zoom=1&source=gbs_api"}
+industryIdentifiers: (2) [{…}, {…}]
+infoLink: "https://play.google.com/store/books/details?id=nggnmAEACAAJ&source=gbs_api"
+language: "en"
+maturityRating: "NOT_MATURE"
+pageCount: 480
+panelizationSummary: {containsEpubBubbles: false, containsImageBubbles: false}
+previewLink: "http://books.google.com/books?id=nggnmAEACAAJ&dq=linux&hl=&cd=3&source=gbs_api"
+printType: "BOOK"
+publishedDate: "2012"
+publisher: "No Starch Press"
+ratingsCount: 2
+readingModes: {text: true, image: false}
+shelf: "currentlyReading"
+subtitle: "A Complete Introduction"
+title: "The Linux Command Line"
+#+end_src
+
+#+begin_src js
+allowAnonLogging: true
+authors: (3) ["Jonathan Gray", "Jeffrey P. Jones", "Ethan Thompson"]
+canonicalVolumeLink: "https://market.android.com/details?id=book-1wy49i-gQjIC"
+categories: ["Performing Arts"]
+contentVersion: "0.6.4.0.preview.2"
+description: "Satirical TV has become mandatory viewing for citizens wishing to make sense of the bizarre contemporary state of political life. Shifts in industry economics and audience tastes have re-made television comedy, once considered a wasteland of escapist humor, into what is arguably the most popular source of political critique. From fake news and pundit shows to animated sitcoms and mash-up videos, satire has become an important avenue for processing politics in informative and entertaining ways, and satire TV is now its own thriving, viable television genre. Satire TV examines what happens when comedy becomes political, and politics become funny. A series of original essays focus on a range of programs, from The Daily Show to South Park, Da Ali G Show to The Colbert Report, The Boondocks to Saturday Night Live, Lil’ Bush to Chappelle’s Show, along with Internet D.I.Y. satire and essays on British and Canadian satire. They all offer insights into what today’s class of satire tells us about the current state of politics, of television, of citizenship, all the while suggesting what satire adds to the political realm that news and documentaries cannot."
+id: "1wy49i-gQjIC"
+imageLinks: {smallThumbnail: "http://books.google.com/books/content?id=1wy49i-gQ…=frontcover&img=1&zoom=5&edge=curl&source=gbs_api", thumbnail: "http://books.google.com/books/content?id=1wy49i-gQ…=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}
+industryIdentifiers: (2) [{…}, {…}]
+infoLink: "https://play.google.com/store/books/details?id=1wy49i-gQjIC&source=gbs_api"
+language: "en"
+maturityRating: "NOT_MATURE"
+pageCount: 288
+panelizationSummary: {containsEpubBubbles: false, containsImageBubbles: false}
+previewLink: "http://books.google.com/books?id=1wy49i-gQjIC&printsec=frontcover&dq=satire&hl=&cd=3&source=gbs_api"
+printType: "BOOK"
+publishedDate: "2009-04-01"
+publisher: "NYU Press"
+readingModes: {text: true, image: false}
+shelf: "read"
+subtitle: "Politics and Comedy in the Post-Network Era"
+title: "Satire TV"
+#+end_src
+
+#+begin_src js
+2:
+allowAnonLogging: true
+authors: ["Robert Galbraith"]
+averageRating: 3.5
+canonicalVolumeLink: "https://market.android.com/details?id=book-evuwdDLfAyYC"
+categories: ["Fiction"]
+contentVersion: "1.21.20.0.preview.2"
+description: "A brilliant debut mystery in a classic vein: Detective Cormoran Strike investigates a supermodel's suicide. After losing his leg to a land mine in Afghanistan, Cormoran Strike is barely scraping by as a private investigator. Strike is down to one client, and creditors are calling. He has also just broken up with his longtime girlfriend and is living in his office. Then John Bristow walks through his door with an amazing story: His sister, thelegendary supermodel Lula Landry, known to her friends as the Cuckoo, famously fell to her death a few months earlier. The police ruled it a suicide, but John refuses to believe that. The case plunges Strike into the world of multimillionaire beauties, rock-star boyfriends, and desperate designers, and it introduces him to every variety of pleasure, enticement, seduction, and delusion known to man. You may think you know detectives, but you've never met one quite like Strike. You may think you know about the wealthy and famous, but you've never seen them under an investigation like this. Introducing Cormoran Strike, this is the acclaimed first crime novel by J.K. Rowling, writing under the pseudonym Robert Galbraith."
+id: "evuwdDLfAyYC"
+imageLinks: {smallThumbnail: "http://books.google.com/books/content?id=evuwdDLfA…=frontcover&img=1&zoom=5&edge=curl&source=gbs_api", thumbnail: "http://books.google.com/books/content?id=evuwdDLfA…=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}
+industryIdentifiers: (2) [{…}, {…}]
+infoLink: "https://play.google.com/store/books/details?id=evuwdDLfAyYC&source=gbs_api"
+language: "en"
+maturityRating: "NOT_MATURE"
+pageCount: 464
+panelizationSummary: {containsEpubBubbles: false, containsImageBubbles: false}
+previewLink: "http://books.google.com/books?id=evuwdDLfAyYC&printsec=frontcover&dq=rowling&hl=&cd=4&source=gbs_api"
+printType: "BOOK"
+publishedDate: "2013-04-30"
+publisher: "Mulholland Books"
+ratingsCount: 3037
+readingModes: {text: true, image: false}
+shelf: "wantToRead"
+#+end_src
