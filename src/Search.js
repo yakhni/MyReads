@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Book from './Book'
 import {DebounceInput} from 'react-debounce-input';
-
 import * as BooksAPI from './BooksAPI'
 
 class Search extends Component {
@@ -11,19 +10,25 @@ class Search extends Component {
     books:  [], // The books returned as a result of the query
   }
 
-  updateSearch = (q) => {
-    return BooksAPI.search(q.trim()).then((result) => {
-      (!result || result.error) ? this.setState({search: q, books: []})
-                                : this.setState({search: q, books: result});
-    })
-  }
-
   componentDidMount() {
     this.searchInput.focus();
   }
 
+  updateSearch = (q) => {
+    if (!q) {
+      this.setState({search: q, books: []})
+      return
+    }
+
+    BooksAPI.search(q.trim()).then((result) => {
+      !result || result.error ? this.setState({search: q, books: []})
+                              : this.setState({search: q, books: result})
+    })
+  }
+
   render() {
     const { search, books } = this.state;
+    const { booksById, updateBook} = this.props
 
     return (
       <div className="search-books">
@@ -34,6 +39,7 @@ class Search extends Component {
           <div className="search-books-input-wrapper">
             {/* Use DebounceInput for a smoother search experience  */}
             <DebounceInput
+              placeholder='Search by Title or Author'
               inputRef={(input) => { this.searchInput = input; }}
               minLength={0}
               debounceTimeout={400}
@@ -44,7 +50,8 @@ class Search extends Component {
           <ol className="books-grid">
             {books.map((b) => (
               <li key={b.id}>
-                <Book book={b} />
+                <Book book={b} updateBook={updateBook}
+                      shelf={(Object.keys(booksById).includes(b.id)) ? booksById[b.id].shelf : 'none'}  />
               </li>
             ))}
           </ol>

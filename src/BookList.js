@@ -4,22 +4,26 @@ import BookShelf from './BookShelf'
 
 class BookList extends Component {
 
-  render() {
-    const { books } = this.props
-    if (Object.keys(books).length === 0)
-      return '' // TODO: improve me! something like a 'Empty Shelves, add some books?'
+  heading = {
+   'read': 'Read',
+   'currentlyReading': 'Currently Reading' ,
+   'wantToRead': 'Want to Read',
+  }
 
-    // TODO optimize me by doing a simple for loop instead
-    const currentlyReading = books.filter((b) => (b.shelf === 'currentlyReading'))
-    const read = books.filter((b) => (b.shelf === 'read'))
-    const wantToRead = books.filter((b) => (b.shelf === 'wantToRead'))
+  render() {
+    const { shelves, updateBook } = this.props
 
     return (
       <div className="list-books-content">
         <div>
-          <BookShelf title='Currently Reading' books={currentlyReading} />
-          <BookShelf title='Read' books={read} />
-          <BookShelf title='Want to Read' books={wantToRead} />
+          {Object.keys(shelves).map((shelf) => (
+            <BookShelf
+              key={shelf}
+              title={this.heading[shelf]}
+              books={shelves[shelf]}
+              updateBook={updateBook}
+            />
+          ))}
         </div>
       </div>
     );
