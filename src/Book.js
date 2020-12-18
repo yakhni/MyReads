@@ -14,6 +14,10 @@ class Book extends Component {
       // There's no need to do anything about it, since CSS already creates an empty border for us
     }
 
+    let authors = book.authors
+    if (authors === undefined)
+      authors = ['Unknown']
+
     return (
       <div className="book">
         <div className="book-top">
@@ -21,7 +25,7 @@ class Book extends Component {
           <ShelfChanger book={book} selected={shelf} updateBook={updateBook} />
         </div>
         <div className="book-title">{book.title}</div>
-        {book.authors.map((author) => (
+        {authors.map((author) => (
           <div className="book-authors" key={author}>
             {author}
           </div>
